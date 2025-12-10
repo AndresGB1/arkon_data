@@ -1,0 +1,33 @@
+services:
+  api:
+    build: .
+    container_name: wifi_cdmx_api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/wifi_cdmx
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgis/postgis:18-3.6
+    container_name: wifi_cdmx_db
+    environment:
+      POSTGRES_DB: wifi_cdmx
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      
+
+
+volumes:
+  pgdata:
