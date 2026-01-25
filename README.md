@@ -130,7 +130,7 @@ Todavía faltan más tests pero bueno, es lo que hay por ahora.
 - [ ] Agregar más tests
 - [ ] Configurar CI/CD
 - [ ] Agregar autenticación si se necesita
-- [ ] Cachear consultas frecuentes redis
+- [ ] GraphQL
 
 ## Notas técnicas
 
