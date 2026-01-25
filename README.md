@@ -2,7 +2,7 @@
 
 API para consultar los puntos de acceso WiFi gratuitos en la Ciudad de México. Básicamente es un backend que te permite buscar puntos cercanos, filtrar por alcaldía y cargar datos desde archivos CSV o Excel.
 
-Lo hice con FastAPI porque es rápido de desarrollar y tiene buena documentación automática. Para las consultas geográficas uso PostGIS que es muy útil para calcular distancias y ese tipo de cosas.
+Lo hice con FastAPI porque es rápido de desarrollar y tiene buena documentación automática. Para las consultas geográficas uso PostGIS que es muy útil para calcular distancias.
 
 ## ¿Qué hace?
 
